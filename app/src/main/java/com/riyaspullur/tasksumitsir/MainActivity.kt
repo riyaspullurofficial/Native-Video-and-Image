@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         videoBtnID.isEnabled=false
         captureImageBtnID.isEnabled=false
 
@@ -60,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode==111 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+        if (requestCode==100 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
             videoBtnID.isEnabled=true
             captureImageBtnID.isEnabled=true
         }
